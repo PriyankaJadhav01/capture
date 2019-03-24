@@ -21,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.CameraSource;
-import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.android.gms.vision.face.FaceDetector;
 
 import java.io.BufferedReader;
@@ -154,8 +153,7 @@ public class MainActivity extends AppCompatActivity {
     // Requesting runtime permission to access camera.
     public void EnableRuntimePermissionToAccessCamera(){
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
-                Manifest.permission.CAMERA))
+        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA))
         {
 
             // Printing toast message after enabling runtime permission.
