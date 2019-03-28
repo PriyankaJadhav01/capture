@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
     String GetImageNameFromEditText;
 
-    String ImageNameFieldOnServer = "ftp.scubesofttech.com/images/image_name" ;
+    String ImageNameFieldOnServer = "www.scubesofttech.com/faceread/images/image_name" ;
 
-    String ImagePathFieldOnServer = "ftp.scubesofttech.com/images" ;
+    String ImagePathFieldOnServer = "ftp.scubesofttech.com/faceread/images" ;
 
-    String ImageUploadPathOnSever ="ftp.scubesofttech.com/images/image_upload_to_server.php" ;
+    String ImageUploadPathOnSever ="ftp.scubesofttech.com/faceread/images/image_upload_to_server.php" ;
 
 
     @Override
@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 GetImageNameFromEditText = imageName.getText().toString();
-
                 ImageUploadToServerFunction();
 
             }
