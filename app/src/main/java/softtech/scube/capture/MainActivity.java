@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
     String GetImageNameFromEditText;
 
-    String ImageNameFieldOnServer = "www.scubesofttech.com/faceread/images/image_name" ;
+    String ImageNameFieldOnServer = "image_name" ;
 
-    String ImagePathFieldOnServer = "ftp.scubesofttech.com/faceread/images" ;
+    String ImagePathFieldOnServer = "image_path" ;
 
-    String ImageUploadPathOnSever ="ftp.scubesofttech.com/faceread/images/image_upload_to_server.php" ;
+    String ImageUploadPathOnSever ="http://www.scubesofttech.com/faceread/images/image_upload_to_server.php" ;
 
 
     @Override
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
         byteArrayOutputStreamObject = new ByteArrayOutputStream();
 
         // Converting bitmap image to jpeg format, so by default image will upload in jpeg format.
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStreamObject);
+       // bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStreamObject);
 
         byte[] byteArrayVar = byteArrayOutputStreamObject.toByteArray();
 
@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,string1,Toast.LENGTH_LONG).show();
 
                 // Setting image as transparent after done uploading.
-                ImageViewHolder.setImageResource(android.R.color.transparent);
+               // ImageViewHolder.setImageResource(android.R.color.transparent);
 
 
             }
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
 
                 HashMapParams.put(ImageNameFieldOnServer, GetImageNameFromEditText);
 
-                HashMapParams.put(ImagePathFieldOnServer, ConvertImage);
+                HashMapParams.put(ImagePathFieldOnServer, GetImageNameFromEditText);
 
                 String FinalData = imageProcessClass.ImageHttpRequest(ImageUploadPathOnSever, HashMapParams);
 
