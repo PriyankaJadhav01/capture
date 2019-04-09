@@ -5,6 +5,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:background="@drawable/back"
 tools:context=".MainActivity">
 
 <ImageView
@@ -19,6 +20,7 @@ tools:context=".MainActivity">
     android:text="Click here to capture image using camera"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ff4747"
     android:id="@+id/button"
     android:layout_below="@+id/imageView"/>
 
@@ -40,6 +42,7 @@ tools:context=".MainActivity">
     android:layout_height="wrap_content"
     android:text="Upload Captured Image On Server"
     android:layout_below="@+id/editText"
+    android:background="#ff4747"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true" />
 
